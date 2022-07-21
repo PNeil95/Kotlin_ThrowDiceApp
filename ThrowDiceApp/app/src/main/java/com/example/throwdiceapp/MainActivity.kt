@@ -1,5 +1,6 @@
 package com.example.throwdiceapp
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -18,6 +19,8 @@ class MainActivity : AppCompatActivity() {
             //Prueba
             // Toast.makeText(this,"Presiono el Boton", Toast.LENGTH_LONG).show()
             timeDice()
+            val soundThrow = MediaPlayer.create(this,R.raw.randomdice)
+            soundThrow.start()
         }
         rollDice()
 
