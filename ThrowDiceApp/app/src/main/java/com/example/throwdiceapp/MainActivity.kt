@@ -3,6 +3,7 @@ package com.example.throwdiceapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -23,9 +24,21 @@ class MainActivity : AppCompatActivity() {
     //Get Number Aleatorio
     private fun rollDice(){
         var number:Int = throwDice(6)
-        var tvResult:TextView = findViewById(R.id.tvResult)
+        val tvResult:TextView = findViewById(R.id.tvResult)
         tvResult.text = number.toString()
+
+        val drawableResource = when(number) {
+            1 -> R.drawable.dice1
+            2 -> R.drawable.dice2
+            3 -> R.drawable.dice3
+            4 -> R.drawable.dice4
+            5 -> R.drawable.dice5
+            else -> R.drawable.dice6
+        }
         //Toast.makeText(this,number.toString(),Toast.LENGTH_LONG).show()
+        val imgDice:ImageView = findViewById(R.id.imgDice)
+        //View img
+        imgDice.setImageResource(drawableResource)
 
     }
 

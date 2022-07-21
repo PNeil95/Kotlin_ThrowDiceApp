@@ -6,37 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.215"
-        tools:text="1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnThrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Throw Dice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgDice" />
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="399dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:textAlignment="center"
+            android:textSize="96sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1" />
 
-    <ImageView
-        android:id="@+id/imgDice"
-        android:layout_width="153dp"
-        android:layout_height="179dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/dice1"
-        tools:layout_editor_absoluteY="253dp"
-        tools:srcCompat="@drawable/dice1" />
+        <ImageView
+            android:id="@+id/imgDice"
+            android:layout_width="401dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/dice1"
+            tools:srcCompat="@drawable/dice1" />
+
+        <Button
+            android:id="@+id/btnThrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="44dp"
+            android:text="Throw Dice" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
