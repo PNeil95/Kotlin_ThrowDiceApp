@@ -2,6 +2,7 @@ package com.example.throwdiceapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,8 +17,9 @@ class MainActivity : AppCompatActivity() {
         btnThrow.setOnClickListener {
             //Prueba
             // Toast.makeText(this,"Presiono el Boton", Toast.LENGTH_LONG).show()
-            rollDice()
+            timeDice()
         }
+        rollDice()
 
     }
 
@@ -47,4 +49,17 @@ class MainActivity : AppCompatActivity() {
         return (1..max).random()
     }
 
+    //Add Timer Dice - Generate Function
+    private fun timeDice(){
+        object:CountDownTimer(3000,200){
+            override fun onTick(p0: Long) {
+                rollDice()
+            }
+
+            override fun onFinish() {
+
+            }
+
+        }.start()
+    }
 }
